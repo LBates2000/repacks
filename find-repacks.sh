@@ -8,7 +8,7 @@ for comic in "$library"/*.cb? "$library"/**/*.cb? ; do
   repack=$(7z l "$comic" "$repackFile" -ba) # undocumented 7-zip switch
   if [ "$repack" ]
     then
-      echo "$comic"
+      echo "Moving $comic to $repackDir"
       mv "$comic" "$repackDir/"
   fi
 done
